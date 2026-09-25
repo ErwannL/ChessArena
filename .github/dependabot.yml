@@ -1,17 +1,31 @@
+# One grouped PR per ecosystem and per cycle, to keep notifications low.
 version: 2
 updates:
   - package-ecosystem: npm
     directory: /
-    schedule: { interval: weekly }
+    schedule: { interval: monthly }
+    open-pull-requests-limit: 3
     groups:
       dev-dependencies:
         dependency-type: development
+        update-types: [minor, patch]
+    ignore:
+      # Major versions (e.g. TypeScript 7) are migrated by hand in a dedicated PR.
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
     commit-message: { prefix: 'chore(deps)' }
   - package-ecosystem: github-actions
     directory: /
     schedule: { interval: monthly }
+    groups:
+      actions:
+        patterns: ['*']
     commit-message: { prefix: 'ci(deps)' }
   - package-ecosystem: docker
     directory: /
     schedule: { interval: monthly }
+    ignore:
+      # Stay on the Node LTS line: majors (and odd non-LTS releases) are upgraded by hand.
+      - dependency-name: node
+        update-types: ['version-update:semver-major']
     commit-message: { prefix: 'build(deps)' }
