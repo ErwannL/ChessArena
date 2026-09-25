@@ -100,7 +100,7 @@ export class LocalApi implements ArenaApi {
     private readonly storage: KeyValueStorage,
     private readonly key = 'chessarena:db',
   ) {
-    let raw: unknown = null;
+    let raw: unknown;
     try {
       raw = JSON.parse(storage.getItem(key) ?? 'null');
     } catch {

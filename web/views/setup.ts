@@ -173,7 +173,7 @@ export async function setupView(el: HTMLElement, params: string[]): Promise<void
     };
   } else if (mode === 'pve') {
     const human = picker('human', 'pve-human', 0);
-    const bot = picker('bot', 'pve-bot', 2);
+    const bot = picker('bot', 'pve-bot', 4);
     const color = h(
       'select',
       { 'aria-label': 'Couleur' },
