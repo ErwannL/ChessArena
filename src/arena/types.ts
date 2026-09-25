@@ -133,13 +133,13 @@ export interface NewPlayerInput {
   name: string;
   kind: PlayerKind;
   ranked?: boolean;
-  bot?: Partial<BotSpec> & { config?: unknown };
+  bot?: BotInput;
 }
 
 export interface PlayerPatch {
   name?: string;
   ranked?: boolean;
-  bot?: Partial<BotSpec> & { config?: unknown };
+  bot?: BotInput;
 }
 
 export interface NewGameInput {
@@ -168,3 +168,5 @@ export interface ArenaStats {
   averageLength: number;
   reasons: Partial<Record<EndReason, number>>;
 }
+
+export type BotInput = Partial<Omit<BotSpec, 'config'>> & { config?: unknown };
