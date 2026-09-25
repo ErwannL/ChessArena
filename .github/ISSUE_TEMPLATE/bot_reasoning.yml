@@ -1,0 +1,21 @@
+name: 🧠 Nouveau type de calcul pour les bots
+description: Proposer une nouvelle heuristique de réflexion
+labels: [bots, enhancement]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Nom du calcul
+      placeholder: Ex. « Contrôle des colonnes ouvertes »
+    validations:
+      required: true
+  - type: textarea
+    id: rule
+    attributes:
+      label: Que mesure-t-il ? Comment le noter (en centipions) ?
+    validations:
+      required: true
+  - type: textarea
+    id: positions
+    attributes:
+      label: Positions d'exemple (FEN) où il devrait aider
