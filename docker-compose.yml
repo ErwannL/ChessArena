@@ -1,0 +1,13 @@
+services:
+  chessarena:
+    build: .
+    image: chessarena:latest
+    container_name: chessarena
+    ports:
+      - '${PORT:-3000}:3000'
+    volumes:
+      - chessarena-data:/data
+    restart: unless-stopped
+
+volumes:
+  chessarena-data:

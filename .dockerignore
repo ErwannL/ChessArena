@@ -1,0 +1,12 @@
+node_modules
+dist
+coverage
+data
+test-results
+playwright-report
+.git
+.github
+*.md
+!README.md
+Dockerfile
+docker-compose*.yml
