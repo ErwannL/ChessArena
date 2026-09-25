@@ -1,0 +1,12 @@
+{
+  "name": "ChessArena",
+  "short_name": "ChessArena",
+  "description": "Échecs PvP, PvE et EvE avec bots paramétrables et classement Elo.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d0f1a",
+  "theme_color": "#0d0f1a",
+  "icons": [
+    { "src": "/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

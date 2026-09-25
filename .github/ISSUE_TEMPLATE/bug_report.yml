@@ -1,0 +1,24 @@
+name: 🐛 Bug
+description: Quelque chose ne fonctionne pas
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: Que se passe-t-il ?
+      description: Étapes pour reproduire, résultat attendu vs obtenu.
+    validations:
+      required: true
+  - type: input
+    id: pgn
+    attributes:
+      label: PGN / FEN (si c'est un problème de règles ou de bot)
+  - type: dropdown
+    id: device
+    attributes:
+      label: Appareil
+      options: [PC, Tablette, Téléphone]
+  - type: input
+    id: browser
+    attributes:
+      label: Navigateur et version

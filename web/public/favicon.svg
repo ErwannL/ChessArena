@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="ChessArena">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="70%">
+      <stop offset="0" stop-color="#2a2f4a"/>
+      <stop offset="1" stop-color="#0d0f1a"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe29a"/>
+      <stop offset="0.55" stop-color="#f2b53a"/>
+      <stop offset="1" stop-color="#c7801a"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+  <g fill="none" stroke="url(#gold)" stroke-width="3" opacity="0.9">
+    <ellipse cx="64" cy="98" rx="46" ry="12"/>
+    <ellipse cx="64" cy="98" rx="34" ry="8" opacity="0.5"/>
+  </g>
+  <g fill="#ffffff" opacity="0.08">
+    <rect x="18" y="18" width="12" height="12"/><rect x="42" y="18" width="12" height="12"/>
+    <rect x="30" y="30" width="12" height="12"/><rect x="18" y="42" width="12" height="12"/>
+  </g>
+  <path fill="url(#gold)" stroke="#6b3d05" stroke-width="2" stroke-linejoin="round"
+    d="M40 100h48v-7l-6-5c1-14 7-24 9-36 2-15-8-28-24-30l-5-9-6 11c-9 4-17 12-21 22l-7 11c-2 5 1 9 6 8l7-3c5-2 10-2 14-5 2 7-3 15-9 23l-4 6 2 6z"/>
+  <circle cx="60" cy="40" r="3.2" fill="#2a1a05"/>
+  <path d="M66 30c6 1 12 6 13 14" fill="none" stroke="#fff4cf" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+</svg>
