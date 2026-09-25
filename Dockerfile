@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # ---------- build ----------
-FROM node:22-alpine AS build
+FROM node:25-alpine AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci --ignore-scripts --no-audit --no-fund
@@ -9,7 +9,7 @@ COPY . .
 RUN npm run build
 
 # ---------- runtime ----------
-FROM node:22-alpine AS runtime
+FROM node:25-alpine AS runtime
 LABEL org.opencontainers.image.title="ChessArena" \
       org.opencontainers.image.description="Échecs PvP / PvE / EvE avec bots paramétrables et classement Elo" \
       org.opencontainers.image.source="https://github.com/ErwannL/ChessArena" \
