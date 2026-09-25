@@ -270,6 +270,7 @@ describe('Game', () => {
     const g = new Game();
     for (let i = 0; i < 2; i++) for (const m of ['Nf3', 'Nf6', 'Ng1', 'Ng8']) g.move(m);
     expect(g.repetitionCount()).toBe(3);
+    expect(g.positionKeys()).toHaveLength(9);
     expect(g.status().reason).toBe('threefold');
   });
 

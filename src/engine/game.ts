@@ -91,6 +91,11 @@ export class Game {
     return this.played[this.played.length - 1] ?? null;
   }
 
+  /** Repetition keys of every position reached so far. */
+  positionKeys(): string[] {
+    return this.positions.map(positionKey);
+  }
+
   repetitionCount(): number {
     const key = positionKey(this.position);
     return this.positions.filter((p) => positionKey(p) === key).length;
