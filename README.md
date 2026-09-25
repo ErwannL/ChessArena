@@ -41,7 +41,7 @@
 
 ```bash
 docker compose up -d
-# → http://localhost:3000   (depuis un téléphone du même réseau : http://<ip-du-pc>:3000)
+# → http://localhost:8091   (depuis un téléphone du même réseau : http://<ip-du-pc>:8091)
 ```
 
 Les données (joueurs, bots, parties) sont conservées dans le volume `chessarena-data`.
