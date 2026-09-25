@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0d0f1a" />
+    <meta
+      name="description"
+      content="ChessArena — échecs PvP, PvE et EvE avec bots à calculs paramétrables et classement Elo détaillé."
+    />
+    <title>ChessArena</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/logo.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#/"
+        ><img src="/logo.svg" alt="" width="36" height="36" /><span>Chess<b>Arena</b></span></a
+      >
+      <nav class="nav" id="nav">
+        <a href="#/" data-route="home">Accueil</a>
+        <a href="#/new/pve" data-route="new">Jouer</a>
+        <a href="#/leaderboard" data-route="leaderboard">Classement</a>
+        <a href="#/bots" data-route="bots">Bots</a>
+        <a href="#/games" data-route="games">Parties</a>
+      </nav>
+      <span class="mode-badge" id="mode-badge" hidden></span>
+    </header>
+    <main id="app" class="app" aria-live="polite"></main>
+    <div id="toasts" class="toasts" aria-live="assertive"></div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
