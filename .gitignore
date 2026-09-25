@@ -1,0 +1,12 @@
+node_modules/
+dist/
+dist-server/
+coverage/
+data/
+*.log
+.DS_Store
+.env
+.vscode/*
+!.vscode/extensions.json
+test-results/
+playwright-report/
